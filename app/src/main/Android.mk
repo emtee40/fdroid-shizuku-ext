@@ -11,6 +11,7 @@ include $(BUILD_PREBUILT)
 include $(CLEAR_VARS)
 LOCAL_PACKAGE_NAME := F-DroidPrivilegedExtension
 LOCAL_MODULE_TAGS := optional
+LOCAL_CERTIFICATE := platform
 LOCAL_PRIVILEGED_MODULE := true
 LOCAL_SDK_VERSION := current
 # Keep IPackageInstallObserver and IPackageDeleteObserver

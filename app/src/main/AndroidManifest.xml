@@ -16,6 +16,9 @@
     <uses-permission
         android:name="android.permission.DELETE_PACKAGES"
         tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.ACCESS_SHARED_LIBRARIES"
+        tools:ignore="ProtectedPermissions" />
 
     <application
         android:allowBackup="false"

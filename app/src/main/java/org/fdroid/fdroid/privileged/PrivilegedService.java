@@ -31,6 +31,7 @@ import android.content.pm.IPackageInstallObserver;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageInstaller;
 import android.content.pm.PackageManager;
+import android.content.pm.SharedLibraryInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.os.IBinder;
@@ -256,6 +257,18 @@ public class PrivilegedService extends Service {
                 }
             }
             return getPackageManager().getInstalledPackages(flags);
+        }
+
+        @Override
+        public List<SharedLibraryInfo> getDeclaredSharedLibraries(String packageName, int flags) {
+            try {
+                return (List<SharedLibraryInfo>) getPackageManager().getClass().getMethod(
+                        "getDeclaredSharedLibraries", String.class, int.class).invoke(
+                                getPackageManager(), packageName, flags);
+            } catch (Exception e) {
+                Log.e(TAG, "Android not compatible!", e);
+            }
+            return null;
         }
     };
 
