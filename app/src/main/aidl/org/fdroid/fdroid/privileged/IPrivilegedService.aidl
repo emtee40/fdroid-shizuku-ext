@@ -62,4 +62,6 @@ interface IPrivilegedService {
 
     List<PackageInfo> getInstalledPackages(in int flags);
 
+    List<SharedLibraryInfo> getDeclaredSharedLibraries(in String packageName, in int flags);
+
 }
