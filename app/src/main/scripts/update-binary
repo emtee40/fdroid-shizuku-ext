@@ -18,58 +18,81 @@
 # communicate with it using the recovery api.
 # arg 3 is the zip file
 
-echo -n -e 'ui_print Installing F-DroidPrivilegedExtension...\n' > /proc/self/fd/$2
+set -e
+
+echo -n -e 'ui_print Configuring...\n' > /proc/self/fd/$2
 
 FPE_NAME=F-DroidPrivilegedExtension
-FPE=${FPE_NAME}.apk
+FPE="${FPE_NAME}.apk"
 FDROID_NAME=F-Droid
-FDROID=${FDROID_NAME}.apk
-PERM_DIR="etc/permissions"
+FDROID="${FDROID_NAME}.apk"
+PERM_DIR=etc/permissions
 PERM=permissions_org.fdroid.fdroid.privileged.xml
 ADDOND=80-fdroid.sh
-SYSTEM="/system"
-MOUNT_POINT="/system"
+BLOCKDEV=/dev/block/bootdevice/by-name/system
+SYSTEM=/system
+MOUNT_POINT=/system
 BUILD_VERSION_SDK="$(getprop ro.build.version.sdk)"
 BUILD_VERSION_SDK_INT="${BUILD_VERSION_SDK#*=}"
 
 # Modern devices use /system as root ("/")
-system_as_root=`getprop ro.build.system_root_image`
-if [ "$system_as_root" == "true" ]; then
-  SYSTEM="/system/system"
+if [ "$(getprop ro.build.system_root_image)" = true ]; then
+  SYSTEM=/system/system
 fi
 
 # Android 10 (SDK 29) and above use /mnt/system/ and /mnt/system/system
 if [ "${BUILD_VERSION_SDK_INT}" -ge 29 ]; then
-  SYSTEM="/mnt/system/system"
-  MOUNT_POINT="/mnt/system"
+  SYSTEM=/mnt/system/system
+  MOUNT_POINT=/mnt/system
 fi
+
+if [ -e /dev/block/bootdevice/by-name/system_a ] && \
+   [ -e /dev/block/bootdevice/by-name/system_b ]; then
+  CURRENTSLOT="$(getprop ro.boot.slot_suffix)"
+  if [ "${CURRENTSLOT}" = _a ]; then
+    BLOCKDEV=/dev/block/bootdevice/by-name/system_a
+  elif [ "${CURRENTSLOT}" = _b ]; then
+    BLOCKDEV=/dev/block/bootdevice/by-name/system_b
+  fi
+fi
+
+echo -n -e 'ui_print done\n' > /proc/self/fd/$2
+echo -n -e 'ui_print\n' > /proc/self/fd/$2
+
+echo -n -e "ui_print Unzipping...\n" > /proc/self/fd/$2
 
 cd /tmp
 mkdir fdroid
 cd fdroid
 unzip -o "$3"
 
-if mountpoint -q "$MOUNT_POINT"; then
-  mount -o remount,rw "$MOUNT_POINT"
+echo -n -e 'ui_print done\n' > /proc/self/fd/$2
+echo -n -e 'ui_print\n' > /proc/self/fd/$2
+
+echo -n -e "ui_print Mounting ${MOUNT_POINT} ($BLOCKDEV)...\n" > /proc/self/fd/$2
+
+if mountpoint -q "${MOUNT_POINT}"; then
+  mount -o remount,rw "${MOUNT_POINT}"
 else
-  mount "/dev/block/bootdevice/by-name/system" "$MOUNT_POINT"
+  mount "${BLOCKDEV}" "${MOUNT_POINT}"
 fi
+
+echo -n -e 'ui_print done\n' > /proc/self/fd/$2
+echo -n -e 'ui_print\n' > /proc/self/fd/$2
 
 rm -rf "${SYSTEM}/app/FDroid"*
 rm -rf "${SYSTEM}/priv-app/FDroid"*
 rm -rf "${SYSTEM}/app/F-Droid"*
 rm -rf "${SYSTEM}/priv-app/F-Droid"*
 
-if [ "${BUILD_VERSION_SDK_INT}" -ge 21 ]
-then
+if [ "${BUILD_VERSION_SDK_INT}" -ge 21 ]; then
   FPE_DIR="${SYSTEM}/priv-app/${FPE_NAME}"
-  mkdir ${FPE_DIR}
-  chmod 755 ${FPE_DIR}
+  mkdir "${FPE_DIR}"
+  chmod 755 "${FPE_DIR}"
   FDROIDDIR="${SYSTEM}/app/${FDROID_NAME}"
-  mkdir ${FDROIDDIR}
-  chmod 755 ${FDROIDDIR}
-elif [ "${BUILD_VERSION_SDK_INT}" -ge 19 ]
-then
+  mkdir "${FDROIDDIR}"
+  chmod 755 "${FDROIDDIR}"
+elif [ "${BUILD_VERSION_SDK_INT}" -ge 19 ]; then
   FPE_DIR="${SYSTEM}/priv-app"
   FDROIDDIR="${SYSTEM}/app"
 else
@@ -77,26 +100,31 @@ else
   FDROIDDIR="${SYSTEM}/app"
 fi
 
-if [ "${BUILD_VERSION_SDK_INT}" -ge 26 ]
-then
-	mkdir ${SYSTEM}/${PERM_DIR}
-	chmod 755 ${SYSTEM}/${PERM_DIR}
-	cp ${PERM} ${SYSTEM}/${PERM_DIR}
-	chmod 644 ${SYSTEM}/${PERM_DIR}/${PERM}
+if [ "${BUILD_VERSION_SDK_INT}" -ge 26 ]; then
+  if [ ! -e "${SYSTEM}/${PERM_DIR}" ]; then
+    mkdir "${SYSTEM}/${PERM_DIR}"
+    chmod 755 "${SYSTEM}/${PERM_DIR}"
+  fi
+  cp "${PERM}" "${SYSTEM}/${PERM_DIR}/"
+  chmod 644 "${SYSTEM}/${PERM_DIR}/${PERM}"
 fi
 
-cp ${FPE} ${FPE_DIR}
-chmod 644 ${FPE_DIR}/${FPE}
+echo -n -e 'ui_print Installing F-DroidPrivilegedExtension...\n' > /proc/self/fd/$2
+
+cp "${FPE}" "${FPE_DIR}/"
+chmod 644 "${FPE_DIR}/${FPE}"
+
 echo -n -e 'ui_print done\n' > /proc/self/fd/$2
 echo -n -e 'ui_print\n' > /proc/self/fd/$2
 
 echo -n -e 'ui_print Installing F-Droid...\n' > /proc/self/fd/$2
-cp ${FDROID} ${FDROIDDIR}
-chmod 644 ${FDROIDDIR}/${FDROID}
 
-cp ${ADDOND} ${SYSTEM}/addon.d/
+cp "${FDROID}" "${FDROIDDIR}/"
+chmod 644 "${FDROIDDIR}/${FDROID}"
 
-umount "$MOUNT_POINT"
+cp "${ADDOND}" "${SYSTEM}/addon.d/"
+
+umount "${MOUNT_POINT}"
 
 echo -n -e 'ui_print done\n' > /proc/self/fd/$2
 echo -n -e 'ui_print\n' > /proc/self/fd/$2
