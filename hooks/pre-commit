@@ -44,5 +44,40 @@ then
     exit 1
 fi
 
+SH_FILES="hooks/pre-commit hooks/pre-push app/src/main/scripts/update-binary app/src/main/scripts/80-fdroid.sh"
+
+err() {
+	echo >&2 ERROR: "$@"
+	exit 1
+}
+
+warn() {
+	echo >&2 WARNING: "$@"
+}
+
+for f in $SH_FILES; do
+    # set -n enables syntax checking without actually executing
+    if ! bash -n $f; then
+        err "bash tests failed!"
+    fi
+
+    if which dash > /dev/null; then
+        if ! dash -n $f; then
+            err "dash tests failed!"
+        fi
+    else
+        warn "skipping dash tests"
+    fi
+
+    if which checkbashisms > /dev/null; then
+        test "$f" != "app/src/main/scripts/update-binary" ||  continue # this fails
+        if ! checkbashisms $f; then
+            err "checkbashisms tests failed!"
+        fi
+    else
+        warn "skipping checkbashisms tests"
+    fi
+done
+
 # If there are whitespace errors, print the offending file names and fail.
 exec git diff-index --check --cached $against --
