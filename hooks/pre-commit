@@ -5,6 +5,10 @@
 # exit with non-zero status after issuing an appropriate message if
 # it wants to stop the commit.
 
+# SPDX-FileCopyrightText: 2019 Hans-Christoph Steiner <hans@eds.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
 if git rev-parse --verify HEAD >/dev/null 2>&1
 then
     against=HEAD

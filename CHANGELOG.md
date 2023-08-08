@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2017-2022 Hans-Christoph Steiner <hans@eds.org>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 ### 0.2.13 (2022-01-11)
 
 * ota.zip: Fix update-binary to work smoothly on Android 10 and later

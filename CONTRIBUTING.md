@@ -1,3 +1,10 @@
+<!--
+SPDX-FileCopyrightText: 2016 Hans-Christoph Steiner <hans@eds.org>
+SPDX-FileCopyrightText: 2018 TacoTheDank <SkytkRSfan3895@gmail.com>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 # Contributing
 
 ## Reporting issues

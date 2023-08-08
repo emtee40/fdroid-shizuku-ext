@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+SPDX-FileCopyrightText: 2016 Dominik Schürmann <dominik@dominikschuermann.de>
+SPDX-FileCopyrightText: 2018 Hans-Christoph Steiner <hans@guardianproject.info>
+SPDX-FileCopyrightText: 2021-2022 Rex_sa <rex.sa@pm.me>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 <resources>
     <string name="app_name">ملحقات تطبيق أف-درويد المميزة</string>
 </resources>

@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# SPDX-FileCopyrightText: 2016 Hans-Christoph Steiner <hans@eds.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
 sec=0
 timeout=360
 

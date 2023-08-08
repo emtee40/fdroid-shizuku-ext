@@ -1,5 +1,4 @@
 #!/bin/sh
-
 # An hook script to verify what is about to be pushed.  Called by "git
 # push" after it has checked the remote status, but before anything has been
 # pushed.  If this script exits with a non-zero status nothing will be pushed.
@@ -15,6 +14,10 @@
 # the standard input in the form:
 #
 #   <local ref> <local sha1> <remote ref> <remote sha1>
+
+# SPDX-FileCopyrightText: 2019 Hans-Christoph Steiner <hans@eds.org>
+#
+# SPDX-License-Identifier: Apache-2.0
 
 remote="$1"
 url="$2"

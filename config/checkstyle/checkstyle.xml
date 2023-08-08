@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!--
+SPDX-FileCopyrightText: 2016 Hans-Christoph Steiner <hans@eds.org>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 <!DOCTYPE module PUBLIC
     "-//Puppy Crawl//DTD Check Configuration 1.2//EN"
     "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">

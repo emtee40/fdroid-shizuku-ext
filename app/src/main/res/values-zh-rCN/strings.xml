@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+SPDX-FileCopyrightText: 2017 Hans-Christoph Steiner <hans@guardianproject.info>
+SPDX-FileCopyrightText: 2021 kak mi <wavelake@outlook.com>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 <resources>
     <string name="app_name">F-Droid 特权扩展</string>
 </resources>

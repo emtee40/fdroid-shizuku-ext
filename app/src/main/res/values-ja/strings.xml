@@ -1,4 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+SPDX-FileCopyrightText: 2016 Dominik Schürmann <dominik@dominikschuermann.de>
+SPDX-FileCopyrightText: 2017-2018 Hans-Christoph Steiner <hans@guardianproject.info>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 <resources><string name="app_name">F-Droidの特権拡張機能</string>
 
 </resources>

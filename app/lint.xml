@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+SPDX-FileCopyrightText: 2019 Hans-Christoph Steiner <hans@eds.org>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 <lint>
     <!-- this is never going to be a real "app" -->
     <issue id="GoogleAppIndexingWarning" severity="disable"/>

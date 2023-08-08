@@ -1,3 +1,10 @@
+// SPDX-FileCopyrightText: 2016 Dominik Schürmann <dominik@dominikschuermann.de>
+// SPDX-FileCopyrightText: 2016 relan
+// SPDX-FileCopyrightText: 2016-2019 Hans-Christoph Steiner <hans@eds.org>
+// SPDX-FileCopyrightText: 2017-2018 Chirayu Desai <chirayudesai1@gmail.com>
+//
+// SPDX-License-Identifier: Apache-2.0
+
 apply plugin: 'com.android.application'
 apply plugin: 'checkstyle'
 

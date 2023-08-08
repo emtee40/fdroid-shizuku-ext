@@ -1,0 +1,21 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: F-Droid Priviledged Extension
+Upstream-Contact: Hans-Christoph Steiner <hans@eds.org>
+Source: https://gitlab.com/fdroid/privileged-extension
+
+Files: metadata/*
+Copyright: The F-Droid project and contributors
+License: Apache-2.0
+
+Files: gradle/* gradlew gradlew.bat
+Copyright: Gradle Inc. and contributors
+License: Apache-2.0
+
+Files: f-droid.org-signing-key.gpg
+Copyright: The F-Droid Project
+License: CC0-1.0
+
+Files: app/src/main/res/*.png
+Copyright: 2016 Dominik Schürmann <dominik@dominikschuermann.de>
+           2017 Hans-Christoph Steiner <hans@eds.org>
+License: Apache-2.0

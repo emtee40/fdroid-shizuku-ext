@@ -1,4 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
+
+<!--
+SPDX-FileCopyrightText: 2016 Dominik Schürmann <dominik@dominikschuermann.de>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 <resources><string name="app_name">Pribilegiodun F-Droid Luzapena</string>
 
 </resources>

@@ -1,4 +1,10 @@
 #!/sbin/sh
+
+# SPDX-FileCopyrightText: 2017 Roberto MF <roboe@virgulilla.com>
+# SPDX-FileCopyrightText: 2017-2018 Chirayu Desai <chirayudesai1@gmail.com>
+#
+# SPDX-License-Identifier: Apache-2.0
+
 #
 # ADDOND_VERSION=2
 #
