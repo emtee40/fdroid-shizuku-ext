@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+SPDX-FileCopyrightText: 2016 Dominik Schürmann <dominik@dominikschuermann.de>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 <!-- package name must be unique so suffix with "tests" so package loader doesn't ignore us -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="org.fdroid.fdroid.privileged.tests"

@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2021 Oliver Scott <olivercscott@gmail.com>
+//
+// SPDX-License-Identifier: Apache-2.0
+
 package org.fdroid.fdroid.privileged;
 
 import android.os.Build;

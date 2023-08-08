@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+SPDX-FileCopyrightText: 2021 Naveen <naveen.translator@protonmail.com>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 <resources>
     <string name="app_name">F-Droid சிறப்புரிமை நீட்டிப்பு</string>
 </resources>

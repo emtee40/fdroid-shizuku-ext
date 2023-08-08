@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: 2016 relan
+# SPDX-FileCopyrightText: 2017 Daniel Micay <danielmicay@gmail.com>
+# SPDX-FileCopyrightText: 2018 Chirayu Desai <chirayudesai1@gmail.com>
+#
+# SPDX-License-Identifier: Apache-2.0
+
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)

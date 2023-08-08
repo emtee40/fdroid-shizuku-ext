@@ -2,6 +2,12 @@
 #
 # Script to prepare an update.zip containing F-Droid and the Privileged Extension.
 
+# SPDX-FileCopyrightText: 2017-2018 Chirayu Desai <chirayudesai1@gmail.com>
+# SPDX-FileCopyrightText: 2017-2018 Hans-Christoph Steiner <hans@eds.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+
 set -e
 
 PROG_DIR=$(dirname $(realpath $0))

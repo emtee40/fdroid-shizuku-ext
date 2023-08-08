@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+SPDX-FileCopyrightText: 2016 Dominik Schürmann <dominik@dominikschuermann.de>
+SPDX-FileCopyrightText: 2017 Hans-Christoph Steiner <hans@guardianproject.info>
+SPDX-FileCopyrightText: 2019 Florian <floflr@zaclys.net>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 <resources>
     <string name="app_name">F-Droid Extension des Droits</string>
 </resources>

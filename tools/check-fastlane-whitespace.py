@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+# SPDX-FileCopyrightText: 2021 Hans-Christoph Steiner <hans@eds.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
 import glob
 import os
 

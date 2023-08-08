@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2016 Dominik Schürmann <dominik@dominikschuermann.de>
+#
+# SPDX-License-Identifier: Apache-2.0
+
 -dontwarn android.test.**
 -dontwarn android.support.test.**
 -dontnote junit.framework.**

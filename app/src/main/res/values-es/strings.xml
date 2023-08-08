@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+SPDX-FileCopyrightText: 2016 Dominik Schürmann <dominik@dominikschuermann.de>
+SPDX-FileCopyrightText: 2018 Hans-Christoph Steiner <hans@guardianproject.info>
+SPDX-FileCopyrightText: 2021 Erin McConnell <erinm@riseup.net>
+SPDX-FileCopyrightText: 2021 hiking <joaquinfc@protonmail.com>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 <resources>
     <string name="app_name">Extensión Privilegiada F-Droid</string>
 </resources>

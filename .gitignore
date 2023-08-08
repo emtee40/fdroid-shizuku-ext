@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2016 Dominik Schürmann <dominik@dominikschuermann.de>
+# SPDX-FileCopyrightText: 2016 Hans-Christoph Steiner <hans@eds.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
 # Built application files
 *.apk
 *.ap_

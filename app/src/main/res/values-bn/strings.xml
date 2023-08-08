@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+SPDX-FileCopyrightText: 2019 Tawhid H <Tawhidk757@yahoo.com>
+SPDX-FileCopyrightText: 2020 Julien Gontier <emeuraudeman@protonmail.com>
+SPDX-FileCopyrightText: 2021 Oymate <dhruboadittya96@gmail.com>
+SPDX-FileCopyrightText: 2022 Hans-Christoph Steiner <hans@guardianproject.info>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 <resources>
     <string name="app_name">F-Droid বিশেষাধিকার এক্সটেনশন</string>
 </resources>

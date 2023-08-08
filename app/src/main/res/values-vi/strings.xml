@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+SPDX-FileCopyrightText: 2016 Dominik Schürmann <dominik@dominikschuermann.de>
+SPDX-FileCopyrightText: 2018 Hans-Christoph Steiner <hans@guardianproject.info>
+SPDX-FileCopyrightText: 2021 bruh <quangtrung02hn16@gmail.com>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 <resources>
     <string name="app_name">Phần mở rộng F-Droid có quyền</string>
 </resources>

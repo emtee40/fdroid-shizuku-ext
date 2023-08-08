@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+SPDX-FileCopyrightText: 2016 Dominik Schürmann <dominik@dominikschuermann.de>
+SPDX-FileCopyrightText: 2022 Licaon Kter <licaon.kter@protonmail.com>
+SPDX-FileCopyrightText: 2022 Simona Iacob <s@zp1.net>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 <resources>
     <string name="app_name">F-Droid Extensie privilegiată</string>
 </resources>

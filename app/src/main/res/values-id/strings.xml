@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+SPDX-FileCopyrightText: 2020-2022 signz signotorez <signotorez@gmail.com>
+SPDX-FileCopyrightText: 2022 Dinara Denis <dinaradenis27@gmail.com>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 <resources>
     <string name="app_name">Ekstensi Hak Istimewa F-Droid</string>
 </resources>
