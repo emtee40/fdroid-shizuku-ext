@@ -175,3 +175,11 @@ deploy_nightly:
     # build the APKs!
     - ./gradlew assembleDebug
     - fdroid nightly -v
+
+
+reuse:
+  image:
+    name: fsfe/reuse:latest
+    entrypoint: ['']
+  script:
+    - reuse lint
