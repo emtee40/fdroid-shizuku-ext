@@ -1,21 +1,21 @@
 Megjegyzés: Az F-Droidnak rendszergazdai jogosultságokra van szüksége
-a kiterjesztés (mint rendszer privát-app) telepítéséhez.
+a kiegészítő rendszerszintű („priv-app”) telepítéséhez.
 
-A https://f-droid.org/packages/org.fdroid.fdroid használhatja a rendszerjogosultságokat vagy engedélyeket
-az alkalmazások önálló telepítéséhez, frissítéséhez és eltávolításához. Az egyetlen módja annak, hogy
-ezen jogosultságokat megszerezze rendszeralkalmazássá kell válni.
+A https://f-droid.org/packages/org.fdroid.fdroid arra használhatja a rendszerjogosultságokat
+vagy engedélyeket, hogy önállóan telepítsen, frissítsen vagy eltávolítson alkalmazásokat. Ezen
+jogosultságok megszerzésének egyetlen módja az, hogy rendszeralkalmazássá kell tennie.
 
-Itt jön be a Privilegizált kiegészítő – egy külön alkalmazás
-és sokkal kisebb, rendszeralkalmazásként telepíthető és
-kommunikálhat a fő alkalmazással az AIDL IPC-n keresztül.
+Itt jön a képbe a Privilegizált kiegészítő – egy kisebb, különálló alkalmazás,
+mely rendszeralkalmazásként telepíthető, és az AIDL IPC-n keresztül
+kommunikál a fő alkalmazással.
 
 Ennek számos előnye van:
 
 * Csökkentett lemezhasználat a rendszerpartícióban
 * A rendszerfrissítések nem távolítják el az F-Droidot
-* A rendszerbe való telepítés folyamata root-on keresztül biztonságosabb
+* A rendszerbe való telepítés folyamata így biztonságosabb
 
-E build helyett a legtöbb felhasználó telepíteni szeretné a
-Az „Over-The-Air” (OTA) frissítési ZIP fájlt
-https://f-droid.org/packages/org.fdroid.fdroid.privileged.ota. Ez itt a frissítéshez
-Privilegizált kiegészítő, ha az OTA ZIP használatával lett telepítve.
+E összeállítás helyett, a legtöbb felhasználónak inkább az
+„Over-The-Air” (OTA) frissítési ZIP-fájlt kell telepítenie:
+https://f-droid.org/packages/org.fdroid.fdroid.privileged.ota. Ez azért van itt, hogy
+frissítse az OTA ZIP használatával telepített Privilegizált kiegészítőt.

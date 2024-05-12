@@ -1,3 +1,3 @@
-* Javított OTA ZIP az Android 8.0 Oreohoz
+* Javított OTA ZIP az Android 8.0-hoz (Oreo)
 
-* javított fordítások
+* Frissített fordítások

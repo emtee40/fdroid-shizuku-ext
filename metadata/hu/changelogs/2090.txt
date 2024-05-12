@@ -1,3 +1,3 @@
 * Új nyelvek hozzáadása: cseh, magyar, ujgur
 
-* hozzáadott támogatás a whitelabel buildekhez
+* Támogatás hozzáadása az átcímkézhető összeállításokhoz
