@@ -1,0 +1,5 @@
+* Android.mk buildek javítása
+
+* Új nyelvek hozzáadása: Albán, Bengáli, Francia, Héber, Hindi, Nynorsk, Szlovák.
+
+* Lehetővé teszi a gradle számára a Debianból való függőségek lekérését
